@@ -82,7 +82,7 @@ Now we need to deploy the infrastructure
 $ sam deploy
 ```
 
-This process can take some time, especially the first time because certificate registration can take some time and a CloudFront distribution can take anywhere from 15-60 minutes when created from scratch.
+The actual certficate verification for the domain name is currently manual. You'll need to navigate to the Certificate Manager console in AWS, find the record awaiting verification, and click the button on the certificate to manually create the A Record. This could be automated through a Lambda custom resource but I haven't found the time yet. This process can take some time, especially the first time because certificate registration can take some time and a CloudFront distribution can take anywhere from 15-60 minutes when created from scratch.
 
 #### Build and Deploy Your Website
 
